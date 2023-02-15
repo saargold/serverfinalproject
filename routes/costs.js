@@ -1,13 +1,16 @@
+//Saar Goldshtein & Yulia Kufman
+
 const express = require("express") ;
 const {CostsModel,validCost} =require("../models/costsModel")
 const {UsersModel} =require("../models/userModel")
-
 const router=express.Router();
 
-router.get("/",async(req,res)=>{
+router.get('/',  async  function(req, res) {
     let data = await CostsModel.find({});
+  console.log(data +"data");
     res.json(data)
-})
+  });
+  
 router.post("/",async(req,res)=>{
 
    // check validation
@@ -25,11 +28,6 @@ router.post("/",async(req,res)=>{
     else{
         res.json({msg:"UserId Not Found"});
     }
-
-
 })
-
-
-
 
 module.exports=router;

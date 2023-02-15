@@ -1,3 +1,5 @@
+//Saar Goldshtein & Yulia Kufman
+
 const indexR = require("./index");
 const usersR = require("./users");
 const costsR = require("./costs");
@@ -11,8 +13,6 @@ exports.routesInit =(app) =>{
     app.use("/users",usersR);
     app.use("/about",aboutR);
     app.use("/report",reportR);
-
-
 
 
 }

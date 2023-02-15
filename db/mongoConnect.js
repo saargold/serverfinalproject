@@ -1,3 +1,6 @@
+
+//Saar Goldshtein & Yulia Kufman
+
 const mongoose = require("mongoose");
 
 main().catch(err=>console.log(err));
@@ -10,7 +13,7 @@ async function main(){
     await mongoose.connect(mongoAtlasUri);
 
     // await mongoose.connect('mongodb://127.0.0.1:27017/express0');
-    console.log("mongo connect to express 0 local");
+    console.log("mongo connect to db");
 
 };
 //module.exports=db;

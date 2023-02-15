@@ -1,15 +1,21 @@
+//Saar Goldshtein & Yulia Kufman
+
 const mongoose = require("mongoose");
 // for validation
 const Joi = require("joi")
-const costsModel = new mongoose.Schema({
+
+
+
+const costsModel = new mongoose.Schema({ 
+
     user_id:String,
     year:String,
     month:String,
     day:String,
-    id:String,
     description:String,
     category:String,
     sum: Number
+    
 
 });
 const CostsModel = mongoose.model("costs",costsModel);
@@ -20,7 +26,6 @@ exports.validCost =(_reqBody)=>{
     let joiSchema = Joi.object({
 
         user_id:Joi.string().required(),
-        id:Joi.string().required(),
         year:Joi.number().min(1930).max(2023).required(),
         month:Joi.number().min(1).max(12).required(),
         day:Joi.number().min(1).max(31).required(),

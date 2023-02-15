@@ -1,4 +1,7 @@
+//Saar Goldshtein & Yulia Kufman
+
 const mongoose = require("mongoose");
+
 const usersModel = new mongoose.Schema({
     user_id:String,
     first_name :String,
