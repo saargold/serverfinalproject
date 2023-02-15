@@ -4,7 +4,7 @@ var router = express.Router();
 const { UsersModel} =require("../models/userModel")
 
 /* GET home page. */
-router.get('/',  async  function(req, res, next) {
+router.get('/',  async  function(req, res) {
   let data = await UsersModel.find({});
 console.log(data +"data");
   res.json(data)
