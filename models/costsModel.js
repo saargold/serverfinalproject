@@ -21,7 +21,7 @@ exports.validCost =(_reqBody)=>{
 
         user_id:Joi.string().required(),
         id:Joi.string().required(),
-        year:Joi.number().min(1930).max(currentYear).required(),
+        year:Joi.number().min(1930).max(2023).required(),
         month:Joi.number().min(1).max(12).required(),
         day:Joi.number().min(1).max(31).required(),
         description:Joi.string().min(1).required(),
